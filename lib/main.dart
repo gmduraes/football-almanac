@@ -54,19 +54,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -107,18 +94,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             const Text('🔨 PROJECT ON THE WORK 🔨'),
             SizedBox(height: 20),
-            const Text('Have fun with the button to increment the value'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            SizedBox(
+              width: 100,
+              height: 100,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 2.0),
+                child: Image.network(
+                  'https://b.fssta.com/uploads/application/soccer/competition-logos/EnglishPremierLeague.png',
+                ),
+              ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
